@@ -1,0 +1,35 @@
+
+    .cardContainer{
+
+        width:512px;
+        box-shadow: 0px 0px 10px 15px rgba(0,0,0,0.2);
+        background-color:white;
+        /* background: rgba(255,255,255,0.5);
+        border-left:2px solid rgba(255,255,255,0.5);
+        border-top:2px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(1px); */
+    }
+    
+    
+    
+    .postCreator{
+        background-image: linear-gradient(45deg, #FFC796 0%, #FF6B95 100%);
+        background-color: black;
+        transition:all 1s ease-in-out;
+    }   
+    
+    
+    @media all and (max-width:500px){
+        .cardContainer{
+            width:352px;
+        }
+        
+    }   
+    
+    @media all and (min-width:520px){
+        .cardContainer{
+            width: 512px;
+        }
+        
+    }
+    

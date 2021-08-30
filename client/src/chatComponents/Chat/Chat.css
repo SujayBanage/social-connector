@@ -1,0 +1,16 @@
+.chatBox{
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+}
+
+.chatUsers{
+    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+    height: 8rem;
+}
+
+.chatContainer{
+    height: 35rem;
+}
+
+.Addusers{
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+}

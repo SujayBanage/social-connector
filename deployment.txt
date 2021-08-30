@@ -1,0 +1,3 @@
+//create a git repository at the root of the project
+// if there is any git repository in any of the folders then remove it by command 'rm -rf .git'
+//

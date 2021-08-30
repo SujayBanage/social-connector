@@ -1,0 +1,11 @@
+.friend{
+    width: 27rem;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.3);
+    background-image: linear-gradient(45deg, #FFC796 0%, #FF6B95 100%);
+}
+
+.friend_2{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.3);
+    width: 25rem;
+    background-image: linear-gradient(45deg, #FFC796 0%, #FF6B95 100%);
+}

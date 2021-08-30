@@ -1,0 +1,28 @@
+.feedContainer{
+    height:100vh;
+}
+.feedLowerContainer{
+    background: linear-gradient(to right, #a459ee, #e100ff); 
+}
+.upload{
+    background:linear-gradient(45deg, #b721ff 0%, #21d4fd 100%);
+}
+
+::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+@media all and (max-width:500px){
+    ::-webkit-scrollbar{
+        width: 0.4rem;
+    }
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(45deg, #b721ff 0%, #21d4fd 100%);
+    border-radius:5px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
+}

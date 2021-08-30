@@ -1,0 +1,14 @@
+.comment{
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+    background-image: linear-gradient(0deg, #b721ff 0%, #21d4fd 100%);
+}
+.comment-active{
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+    background-image: linear-gradient(0deg, #b721ff 0%, #21d4fd 100%);
+}
+
+.reply{
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+    background-image: linear-gradient(45deg, #FFC796 0%, #FF6B95 100%);
+
+}
