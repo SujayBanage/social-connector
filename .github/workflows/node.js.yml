@@ -21,16 +21,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      # - run: |
-      #     npm install -g yarn
-      #     yarn install 
-      #     cd client
-      #     yarn install
-      #     yarn run build
-      - run: npm install -g yarn
-      - name: yarn install, build, and test
-        run: |
-          yarn
+      - run: |
+          npm i 
           cd client
-          yarn build
+          npm install
+          npm run build
 
