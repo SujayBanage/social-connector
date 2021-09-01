@@ -49,6 +49,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use("/uploads", express.static(staticPath));
 app.use("/output", express.static(compressPath));
+app.use(express.static(path.join(__dirname,'client/build')))
 
 
 
