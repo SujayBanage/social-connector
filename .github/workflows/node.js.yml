@@ -23,8 +23,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: |
-          npm i 
+          npm install -g yarn
+          yarn install 
           cd client
-          npm i
-          npm run build
+          yarn install
+          yarn run build
 
