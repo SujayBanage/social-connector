@@ -1,4 +1,4 @@
-import React, { createContext} from "react";
+import React, {createContext} from "react";
 import ReactDOM from "react-dom";
 import App from "./app.js";
 import io from "socket.io-client";
@@ -12,12 +12,10 @@ const socketContext = createContext();
 
 
 ReactDOM.render(
-  <>
     <socketContext.Provider value={socket}>
       <App />
-    </socketContext.Provider>
-  </>,
+    </socketContext.Provider>,
   document.getElementById("root")
 );
 
-export {socketContext,/*userContext*/};
+export {socketContext};
