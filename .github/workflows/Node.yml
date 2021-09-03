@@ -30,6 +30,9 @@ jobs:
           npm install 
           cd client
           npm install
-          npm run build
+      - name:  
+          run: npm run build
+          env:
+            CI: ''
       
 

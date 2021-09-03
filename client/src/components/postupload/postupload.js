@@ -66,7 +66,7 @@ const Postupload = () => {
         console.log(formData);
         const res = await apiRequest.fileUpload('http://localhost:8000/private/postUpload',formData,sessionStorage.getItem("authToken"));
         console.log(res);
-        if(res.data.success==true){
+        if(res.data.success===true){
             setFile('');
             setDescription('');
             notify(res.data.success, res.data.message);
