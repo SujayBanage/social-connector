@@ -81,7 +81,7 @@ const Login = () => {
     };
 
     const loginRequest = new apiRequestService();
-    const response = await loginRequest.sendformData("/auth/userLogin",data);
+    const response = await loginRequest.sendformData("http://143.244.133.3:8000/auth/userLogin",data);
     if(response.data.success===true){
       console.log("login successfulll!!!");
     }
