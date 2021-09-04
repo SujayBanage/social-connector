@@ -110,7 +110,7 @@ const Profile = () => {
   useEffect(() => {
     async function fetchData() {
       const res = await apiRequest.fetchPrivateData(
-        "http://localhost:8000/private/getuserdata",
+        "/private/getuserdata",
         sessionStorage.getItem("authToken")
       );
       console.log(res);
@@ -124,10 +124,10 @@ const Profile = () => {
       let res;
       postCreatorName
         ? (res = await apiRequest.fetchData(
-            `http://localhost:8000/private/getuserdata/${postCreatorName}`
+            `/getuserdata/${postCreatorName}`
           ))
         : (res = await apiRequest.fetchPrivateData(
-            "http://localhost:8000/private/getuserdata",
+            "/private/getuserdata",
             sessionStorage.getItem("authToken")
           ));
       console.log(res.data);
@@ -156,7 +156,7 @@ const Profile = () => {
     const data = {
       status:"offline"
     }
-    const res = await axios.post('http://localhost:8000/auth/userLogout',data,config);
+    const res = await axios.post('/auth/userLogout',data,config);
     console.log(res);
 
     if(res.data.success){
@@ -182,7 +182,7 @@ const Profile = () => {
         <div className="profilePic h-1/4 flex flex-col items-center justify-center 4 h-96">
           {user.Profileimage ? (
             <img
-              src={`http://localhost:8000/output/${user.Profileimage}`}
+              src={`http://143.244.133.3/output/${user.Profileimage}`}
               className="m-2 object-contained" alt="image"
             />
           ) : (

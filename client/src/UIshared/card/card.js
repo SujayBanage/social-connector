@@ -62,7 +62,7 @@ const Card = (props) => {
                 className="flex items-center justify-start text-white"
               >
                 <Lazyload
-                  imgsrc={`http://localhost:8000/output/${props.postCreatorImg}`}
+                  imgsrc={`http://143.244.133.3/output/${props.postCreatorImg}`}
                   styleClass="h-12 w-12 rounded-full object-cover mr-4 border-2 border-white"
                 />
                 {/* <img src={} className= alt="image"/> */}
@@ -74,11 +74,11 @@ const Card = (props) => {
 
             {/* <div className="imageAndDiscription flex flex-col items-center justify-center mb-4"> */}
             <Lazyload
-              imgsrc={`http://localhost:8000/output/${props.imgSrc}`}
+              imgsrc={`http://143.244.133.3/output/${props.imgSrc}`}
               // imgsrc={pic}
               styleClass="rounded-md object-cover h-auto w-full"
               alt="image"
-              srcset={`http://localhost:8000/output/min-${props.imgSrc} 640w, http://localhost:8000/output/${props.imgSrc} 1000w`}
+              srcset={`http://143.244.133.3/output/min-${props.imgSrc} 640w, http://143.244.133.3/output/${props.imgSrc} 1000w`}
               sizes="(max-width:500px) 640w,1000w"
             />
             <span className="break-words  mt-4">{props.description}</span>

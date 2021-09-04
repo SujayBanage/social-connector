@@ -45,7 +45,7 @@ const FriendRequests = () => {
   useEffect(() => {
     async function fetchData() {
       const res = await apiRequest.fetchPrivateData(
-        "http://localhost:8000/private/getuserdata",
+        "/private/getuserdata",
         sessionStorage.getItem("authToken")
       );
       console.log(res);

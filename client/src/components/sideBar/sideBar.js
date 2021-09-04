@@ -5,15 +5,12 @@ import {toast } from "react-toastify";
 import apiRequestService from "../../services/apiRequestService.js";
 import menu from '../../images/menu.png';
 import close from '../../images/close.png';
-// import Button from "../../UIshared/button/button.js";
 import bell from '../../images/bell.png';
 import bellActive from '../../images/bellActive.png';
 import people from '../../images/people.png';
 import peopleActive from '../../images/peopleActive.png';
 import friends from '../../images/friends.png';
 import friendsActive from '../../images/friendsActive.png';
-// import profile from "../../images/profile.png";
-// import profileActive from "../../images/profileActive.png";
 import message from '../../images/message.png';
 import messageActive from '../../images/messageActive.png';
 import feed from '../../images/feed.png';
@@ -74,7 +71,7 @@ const SideBar = () => {
     if(sessionStorage.getItem("authToken")){
       (
         async()=>{
-          const res = await apiRequest.fetchPrivateData('http://localhost:8000/private/getuserdata',sessionStorage.getItem("authToken"));
+          const res = await apiRequest.fetchPrivateData('/private/getuserdata',sessionStorage.getItem("authToken"));
           console.log(res);
           setUser({username:res.data.user.username,profileimage:res.data.user.profileimage});
         }
@@ -161,7 +158,7 @@ const SideBar = () => {
         <div className="currentUser flex items-center justify-center text-white font-bold m-4">
           {/* <div className="userimg"/> */}
           {
-            user.profileimage ?<img src={`http://localhost:8000/output/${user.profileimage}`} className="userimg h-12 w-12 lg:h-16 lg:w-16 rounded-full border-2 lg:border-4 border-white mr-2" alt="image"/> : null
+            user.profileimage ?<img src={`http://143.244.133.3/output/${user.profileimage}`} className="userimg h-12 w-12 lg:h-16 lg:w-16 rounded-full border-2 lg:border-4 border-white mr-2" alt="image"/> : null
           }
           <Link to={`/profile/${user.username}`}>
           <span>{user.username}</span>

@@ -21,7 +21,7 @@ const Comments = () => {
   });
   useEffect(() => {
     async function fetchData() {
-      const res = await apiRequest.fetchData(`http://localhost:8000/private/getpost/${postid}`);
+      const res = await apiRequest.fetchData(`/private/getpost/${postid}`);
       console.log(res);
       setPost({
         creatorName: res.data.post.creatorName,
@@ -81,7 +81,7 @@ const Comments = () => {
         <div className="post flex flex-col lg:flex-row lg:items-center items-center lg:p-2 justify-center lg:h-2/5 w-4/5 lg:w-1/2   mt-4 rounded-lg">
           <div className="postimg flex flex-col flex-wrap items-center lg:w-4/5 h-full m-2 ">
             <LazyLoad
-              imgsrc={`http://localhost:8000/output/${post.postImg}`}
+              imgsrc={`http://143.244.133.3/output/${post.postImg}`}
               styleClass="object-cover rounded-lg"
               alt="image"
             />
@@ -89,7 +89,7 @@ const Comments = () => {
           <div className="postinfo flex flex-col items-center ">
             <div className="postcreator flex items-center justify-start  m-2">
               <LazyLoad
-                imgsrc={`http://localhost:8000/output/${post.creatorImg.replace(
+                imgsrc={`http://143.244.133.3/output/${post.creatorImg.replace(
                   /\\/g,
                   "/"
                 )}`}

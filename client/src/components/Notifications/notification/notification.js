@@ -29,7 +29,7 @@ const Notification = (props) => {
         <div className={props.type==="request"||props.type==="accept"||props.type==="groupChatRequest" || props.type==="positive" ? " notificationSuccess flex  items-center justify-center p-2 md:p-4 m-2 md:m-4 rounded-lg": "notification flex  items-center justify-center p-2 md:p-4 m-2 md:m-4 rounded-lg"}>
             <div className="notificationfrom flex items-center justify-center">
             {
-                props.img ? <img src={`http://localhost:8000/output/${props.img}`} alt="profileimg" className="h-12 md:h-16 w-12 md:w-16 rounded-full border-2 border-white" alt="image"/>: null
+                props.img ? <img src={`http://143.244.133.3/output/${props.img}`} alt="profileimg" className="h-12 md:h-16 w-12 md:w-16 rounded-full border-2 border-white" alt="image"/>: null
             }
             <Link to={`/profile/${props.name}`} className="m-2 md:m-4">
                 <span className="hidden md:flex md:text-xl font-bold">

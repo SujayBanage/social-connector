@@ -14,7 +14,7 @@ const Message = (props) => {
       <div className="flex items-center ">
         {props.message.user === "admin" ? null : (
           <img
-            src={`http://localhost:8000/output/${props.message.profileimage}`}
+            src={`http://143.244.133.3/output/${props.message.profileimage}`}
             className="h-10 w-10 rounded-full m-2"
             alt="image"
           />

@@ -16,7 +16,7 @@ const Friend = (props) => {
       <Link to={`/profile/${props.username}`} className="flex items-center justify-center">
         {props.profileimage ? (
           <img
-            src={`http://localhost:8000/output/${props.profileimage}`}
+            src={`http://143.244.133.3/output/${props.profileimage}`}
             className="h-10 w-10 md:h-12 md:w-12 rounded-full border-4 border-white mr-4 "
             alt="image"
           />

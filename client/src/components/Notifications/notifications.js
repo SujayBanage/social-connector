@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect ,lazy,Suspense} from "react";
 import { socketContext } from "../../index.js";
-// import User from "../user/user.js";
 import Notification from "./notification/notification.js";
 import Button from "../../UIshared/button/button.js";
 import apiRequestService from "../../services/apiRequestService.js";
@@ -66,7 +65,7 @@ const Notifications = () => {
   useEffect(() => {
     async function fetchUser() {
       const res = await apiRequest.fetchPrivateData(
-        "http://localhost:8000/private/getuserdata",
+        "/private/getuserdata",
         sessionStorage.getItem("authToken")
       );
       console.log(res.data.user);

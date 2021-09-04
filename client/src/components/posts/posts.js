@@ -91,7 +91,7 @@ const Posts = () => {
     (
       async ()=>{
         const res = await apiRequest.fetchPrivateData(
-          "http://localhost:8000/private/getPosts",
+          "/private/getPosts",
           sessionStorage.getItem("authToken")
         );
         // console.log(data);

@@ -31,7 +31,7 @@ const FriendRequest = (props) => {
 
 {
 
-            props.profileimage ?<img src={`http://localhost:8000/output/${props.profileimage}`} className="h-14 md:h-16 w-14  md:w-16 rounded-full border-4 border-white" alt="image"/> : null
+            props.profileimage ?<img src={`http://143.244.133.3/output/${props.profileimage}`} className="h-14 md:h-16 w-14  md:w-16 rounded-full border-4 border-white" alt="image"/> : null
 }
         
             <Link to={`/profile/${props.username}`} className="m-2 md:m-8">

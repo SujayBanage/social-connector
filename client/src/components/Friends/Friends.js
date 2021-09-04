@@ -46,7 +46,7 @@ const Friends = () => {
   useEffect(() => {
     async function fetchData() {
       const res = await apiRequest.fetchPrivateData(
-        "http://localhost:8000/private/getallusers",
+        "/private/getallusers",
         sessionStorage.getItem("authToken")
       );
       console.log(res);

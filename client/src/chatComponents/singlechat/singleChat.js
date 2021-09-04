@@ -28,8 +28,8 @@ const SingleChat = (props) => {
             src={
               props.user1.username === props.currentUser.username &&
               (props.user1.profileimage || props.currentUser.username)
-                ? `http://localhost:8000/output/${props.user2.profileimage}`
-                : `http://localhost:8000/output/${props.user1.profileimage}`
+                ? `http://143.244.133.3/output/${props.user2.profileimage}`
+                : `http://143.244.133.3/output/${props.user1.profileimage}`
             }
             className="h-12 w-12 rounded-full mr-4"
             alt="image"

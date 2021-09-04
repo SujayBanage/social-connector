@@ -76,7 +76,7 @@ const Signup = () => {
     };
 
     const signupRequest = new apiRequestService();
-    const response = await signupRequest.sendformData('http://localhost:8000/auth/userRegister',data);
+    const response = await signupRequest.sendformData('/auth/userRegister',data);
     const responseData = response.data;
     console.log(responseData);
 
