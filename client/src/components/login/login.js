@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, {useState ,useEffect} from "react";
 import Form from "../../UIshared/form/form.js";
 import apiRequestService from "../../services/apiRequestService.js";
 import {useHistory} from 'react-router-dom';
@@ -81,7 +81,7 @@ const Login = () => {
     };
 
     const loginRequest = new apiRequestService();
-    const response = await loginRequest.sendformData("http://143.244.133.3:8000/auth/userLogin",data);
+    const response = await loginRequest.sendformData("http://143.244.133.3/auth/userLogin",data);
     if(response.data.success===true){
       console.log("login successfulll!!!");
     }

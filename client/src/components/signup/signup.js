@@ -76,7 +76,7 @@ const Signup = () => {
     };
 
     const signupRequest = new apiRequestService();
-    const response = await signupRequest.sendformData('http://143.244.133.3:8000/auth/userRegister',data);
+    const response = await signupRequest.sendformData('http://143.244.133.3/auth/userRegister',data);
     const responseData = response.data;
     console.log(responseData);
 
