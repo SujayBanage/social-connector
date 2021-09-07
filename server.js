@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-dotenv.config({});
+dotenv.config({path:'variables.env'});
 import {eventEmitterListner} from "./services/socket.io_listeners.js";
 import express from "express";
 import http from "http";
