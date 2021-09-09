@@ -52,7 +52,6 @@ app.use("/output", express.static(compressPath));
 app.use(express.static(path.join(__dirname,'client/build')))
 
 
-
 // app.use(index);
 // ! for authentication routes
 app.use("/auth", auth);
@@ -61,6 +60,10 @@ app.use("/private", privaterouter);
 
 app.get("/server",(req,res)=>{
   res.send('<h1>hello from server</h1>')
+})
+
+app.get('*',(req,res)=>{
+  res.sendFile(path.resolve(__dirname,'client','build','index.html'))
 })
 
 
