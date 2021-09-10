@@ -1,21 +1,21 @@
-import React from "react";
+import React ,{lazy}from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./components/home/home.js";
-import Login from "./components/login/login.js";
-import Signup from "./components/signup/signup.js";
-import Feed from "./components/feed/feed.js";
-import Postupload from "./components/postupload/postupload.js";
-import Profileupload from "./components/profileupload/profileupload.js";
-import Notifications from "./components/Notifications/notifications.js";
-import Friends from "./components/Friends/Friends.js";
-import FriendRequests from "./components/friendRequests/friendRequests.js";
-import Messages from "./components/Messages/Messages.js";
-import Profile from "./components/Profile/Profile.js";
-import Comments from "./components/comments/comments.js";
-import Chat from './chatComponents/Chat/Chat.js';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './app.css';
+const Home = lazy(()=>import('./components/home/home.js'));
+const Login =lazy(()=>import("./components/login/login.js")) ;
+const Signup = lazy(()=>import("./components/signup/signup.js")) ;
+const Feed = lazy(()=>import("./components/feed/feed.js")) ;
+const Postupload = lazy(()=>import("./components/postupload/postupload.js")) ;
+const Profileupload = lazy(()=>import("./components/profileupload/profileupload.js")) 
+const Notifications = lazy(()=>import("./components/Notifications/notifications.js")) ;
+const Friends = lazy(()=>import("./components/Friends/Friends.js")) ;
+const FriendRequests = lazy(()=>import("./components/friendRequests/friendRequests.js"));
+const Messages = lazy(()=>import("./components/Messages/Messages.js")) ;
+const Profile  = lazy(()=>import("./components/Profile/Profile.js")) ;
+const Comments  = lazy(()=>import("./components/comments/comments.js")) ;
+const Chat  = lazy(()=>import('./chatComponents/Chat/Chat.js'));
 
 const App = () => {
   return (
