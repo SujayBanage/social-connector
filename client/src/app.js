@@ -1,9 +1,9 @@
-import React ,{lazy}from "react";
+import React ,{lazy , Suspense}from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './app.css';
-const Home = lazy(()=>import('./components/home/home.js'));
+import Home from './components/home/home.js';
 const Login =lazy(()=>import("./components/login/login.js")) ;
 const Signup = lazy(()=>import("./components/signup/signup.js")) ;
 const Feed = lazy(()=>import("./components/feed/feed.js")) ;
@@ -22,20 +22,74 @@ const App = () => {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/signup" exact component={Signup} />
-          <Route path="/feed" exact component={Feed} />
-          <Route path="/postUpload" exact component={Postupload} />
-          <Route path="/notifications" exact component={Notifications} />
-          <Route path="/friends" exact component={Friends} />
-          <Route path="/friendrequests" exact component={FriendRequests} />
-          <Route path="/messages" exact component={Messages} />
-          <Route path="/profile" exact component={Profile} />
-          <Route path="/profileUpload" exact component={Profileupload} />
-          <Route path="/profile/:postCreatorName" exact component={Profile} />
-          <Route path="/comments/:postid/:userid" exact component={Comments} />
-          <Route path="/chat/:chatroom/:currentuser" exact component={Chat}/>
+          <Route path="/" exact >
+            <Home/>
+          </Route>
+          <Route path="/login" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+              <Login/>
+            </Suspense>
+          </Route>
+          <Route path="/signup" exact>
+            <Suspense fallback={<h1>...loading</h1>}>
+            <Signup/>
+            </Suspense>
+          </Route>
+          <Route path="/feed" exact>
+            <Suspense fallback={<h1>...loading</h1>}>
+              <Feed/>
+            </Suspense>
+          </Route>
+          <Route path="/postUpload" exact>
+            <Suspense fallback={<h1>...loading</h1>}>
+                <Postupload/>
+            </Suspense>
+          </Route>
+          <Route path="/notifications" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+                <Notifications/>
+            </Suspense>
+          </Route>
+          <Route path="/friends" exact>
+            <Suspense fallback={<h1>...loading</h1>}>
+                <Friends/>
+            </Suspense>
+          </Route>
+          <Route path="/friendrequests" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+              <FriendRequests/>
+            </Suspense>
+          </Route>
+          <Route path="/messages" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+              <Messages/>
+            </Suspense>
+          </Route>
+          <Route path="/profile" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+                <Profile/>
+            </Suspense>
+          </Route>
+          <Route path="/profileUpload" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+                <Profileupload/>
+            </Suspense>
+          </Route>
+          <Route path="/profile/:postCreatorName" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+              <Profile/>
+            </Suspense>
+          </Route>
+          <Route path="/comments/:postid/:userid" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+                <Comments/>
+            </Suspense>
+          </Route>
+          <Route path="/chat/:chatroom/:currentuser" exact >
+            <Suspense fallback={<h1>...loading</h1>}>
+                <Chat/>
+            </Suspense>
+          </Route>
         </Switch>
       </Router>
       <ToastContainer/>
