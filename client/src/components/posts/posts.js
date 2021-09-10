@@ -91,7 +91,7 @@ const Posts = () => {
     (
       async ()=>{
         const res = await apiRequest.fetchPrivateData(
-          "/private/getPosts",
+          `${process.env.PRIVATE_URL}/getPosts`,
           sessionStorage.getItem("authToken")
         );
         // console.log(data);

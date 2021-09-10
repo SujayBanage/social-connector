@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 class apiRequestService{
     async sendformData(url, data){
         const config = {

@@ -241,14 +241,14 @@ const Form = (props) => {
 
             <div className="googleAndOtherLogin flex items-center justify-around">
               <GoogleLogin
-                clientId="392524500657-s9b09rkbj19m4o6qn65g87bvtgntfou6.apps.googleusercontent.com"
+                clientId={process.env.GOOGLE_CLIENT_ID}
                 buttonText="Login"
                 onSuccess={responseSuccessGoogle}
                 onFailure={responseFailGoogle}
                 cookiePolicy={"single_host_origin"}
               />
               <FacebookLogin
-                appId="4407810125938410"
+                appId={process.env.FACEBOOK_ID}
                 autoLoad={false}
                 fields="name,email,picture"
                 icon="fa-facebook"

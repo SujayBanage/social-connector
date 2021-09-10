@@ -45,7 +45,7 @@ const Comment = (props) => {
       <div className="commentByDiv flex items-center justify-center md:m-2">
       <Link to={`/profile/${props.commentBy.username}`}>
         <div className="flex items-center justify-center">
-        <LazyLoad imgsrc={`http://143.244.133.3/output/${props.commentBy.profileimage}`} styleClass="h-10 w-10 md:h-12 md:w-12 rounded-full mr-4" alt="image"/>
+        <LazyLoad imgsrc={`${process.env.OUTPUT_URL}/${props.commentBy.profileimage}`} styleClass="h-10 w-10 md:h-12 md:w-12 rounded-full mr-4" alt="image"/>
         <span className="md:text-lg">{props.commentBy.username}</span>
         </div>
       </Link>
@@ -106,7 +106,7 @@ const Comment = (props) => {
                 console.log(child);
                 return <div className="reply flex flex-col w-4/5 items-start justify-center m-2 md:m-4 p-2 md:p-4 rounded-lg">              
                   <Link to={`/profile/${child.replyBy.name}`} className="flex items-center justify-center">
-                    <LazyLoad imgsrc={`http://143.244.133.3/output/${child.replyBy.profileimage}`} styleClass="h-10 md:h-16 w-10 md:w-16 rounded-full mr-4"/>
+                    <LazyLoad imgsrc={`${process.env.OUTPUT_URL}/${child.replyBy.profileimage}`} styleClass="h-10 md:h-16 w-10 md:w-16 rounded-full mr-4"/>
                     <span>{child.replyBy.name}</span>
                   </Link>
                   <span className="mt-2 md:mt-4 break-words">{child.text}</span>

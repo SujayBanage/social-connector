@@ -32,7 +32,7 @@ const Singlepost = (props) => {
   return (
     <div className="singlepost m-8 p-2 md:p-2 rounded-md flex flex-col items-center justify-center bg-white">
       <Lazyload
-        imgsrc={`http://143.244.133.3/output/min-${props.imgsrc}`}
+        imgsrc={`${process.env.OUTPUT_URL}/min-${props.imgsrc}`}
         styleClass="object-cover rounded-md"
         alt="image"
       />

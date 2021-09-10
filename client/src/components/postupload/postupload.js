@@ -64,7 +64,7 @@ const Postupload = () => {
         formData.append("description",description);
         formData.append("image",file,file.name);
         console.log(formData);
-        const res = await apiRequest.fileUpload('/private/postUpload',formData,sessionStorage.getItem("authToken"));
+        const res = await apiRequest.fileUpload(`${process.env.PRIVATE_URL}/postUpload`,formData,sessionStorage.getItem("authToken"));
         console.log(res);
         if(res.data.success===true){
             setFile('');

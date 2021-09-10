@@ -19,7 +19,7 @@ const User = (props) => {
         <img
           src={
             props.imgsrc
-              ? `http://localhost:8000/output/${props.imgsrc}`
+              ? `${process.env.OUTPUT_URL}/${props.imgsrc}`
               : profile
           }
           className="h-12 w-12 md:h-16 md:w-16 rounded-full mr-3 "
