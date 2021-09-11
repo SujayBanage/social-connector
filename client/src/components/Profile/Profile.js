@@ -110,7 +110,7 @@ const Profile = () => {
   useEffect(() => {
     async function fetchData() {
       const res = await apiRequest.fetchPrivateData(
-        `${process.env.PRIVATE_URL}/getuserdata`,
+        `${process.env.REACT_APP_PRIVATE_URL}/getuserdata`,
         sessionStorage.getItem("authToken")
       );
       console.log(res);
@@ -124,10 +124,10 @@ const Profile = () => {
       let res;
       postCreatorName
         ? (res = await apiRequest.fetchData(
-            `${process.env.PRIVATE_URL}/getuserdata/${postCreatorName}`
+            `${process.env.REACT_APP_PRIVATE_URL}/getuserdata/${postCreatorName}`
           ))
         : (res = await apiRequest.fetchPrivateData(
-            `${process.env.PRIVATE_URL}/getuserdata`,
+            `${process.env.REACT_APP_PRIVATE_URL}/getuserdata`,
             sessionStorage.getItem("authToken")
           ));
       console.log(res.data);
@@ -156,7 +156,7 @@ const Profile = () => {
     const data = {
       status:"offline"
     }
-    const res = await axios.post(`${process.env.AUTH_URL}/userLogout`,data,config);
+    const res = await axios.post(`${process.env.REACT_APP_AUTH_URL}/userLogout`,data,config);
     console.log(res);
 
     if(res.data.success){
@@ -182,7 +182,7 @@ const Profile = () => {
         <div className="profilePic h-1/4 flex flex-col items-center justify-center 4 h-96">
           {user.Profileimage ? (
             <img
-              src={`${process.env.OUTPUT_URL}/${user.Profileimage}`}
+              src={`${process.env.REACT_APP_OUTPUT_URL}/${user.Profileimage}`}
               className="m-2 object-contained" alt="image"
             />
           ) : (

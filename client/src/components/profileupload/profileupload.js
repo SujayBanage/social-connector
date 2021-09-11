@@ -60,7 +60,7 @@ const Profileupload = () => {
         const formData = new FormData();
         formData.append("image",file,file.name);
 
-        const res = await apiRequest.fileUpload(`${process.env.PRIVATE_URL}/profileupload`,formData,sessionStorage.getItem("authToken"));
+        const res = await apiRequest.fileUpload(`${process.env.REACT_APP_PRIVATE_URL}/profileupload`,formData,sessionStorage.getItem("authToken"));
         console.log(res);
         if(res.data.success===true){
             notify(res.data.success, res.data.message)

@@ -127,7 +127,7 @@ const Chat = () => {
     (async () => {
       try {
         const res = await apiRequest.fetchPrivateData(
-          `${process.env.PRIVATE_URL}/getmessages/${chatroom}`,
+          `${process.env.REACT_APP_PRIVATE_URL}/getmessages/${chatroom}`,
           sessionStorage.getItem("authToken")
         );
 

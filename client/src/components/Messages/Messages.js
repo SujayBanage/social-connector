@@ -116,7 +116,7 @@ const Messages = () => {
     async function fetchChat() {
       try {
         const res = await apiRequest.fetchPrivateData(
-          `${process.env.PRIVATE_URL}/getchats`,
+          `${process.env.REACT_APP_PRIVATE_URL}/getchats`,
           sessionStorage.getItem("authToken")
         );
         console.log(res);
@@ -135,7 +135,7 @@ const Messages = () => {
   useEffect(() =>{
     async function fetchGroupChat(){
       try{
-        const res = await apiRequest.fetchPrivateData(`${process.env.PRIVATE_URL}/getGroupChats`,sessionStorage.getItem("authToken"));
+        const res = await apiRequest.fetchPrivateData(`${process.env.REACT_APP_PRIVATE_URL}/getGroupChats`,sessionStorage.getItem("authToken"));
         console.log(res);
         if(res.data.success===true){
           dispatch({type:ACTIONS.SET_GROUPCHATS, payload:res.data.groupChats});

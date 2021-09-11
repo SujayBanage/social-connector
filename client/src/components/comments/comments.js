@@ -21,7 +21,7 @@ const Comments = () => {
   });
   useEffect(() => {
     async function fetchData() {
-      const res = await apiRequest.fetchData(`${process.env.PRIVATE_URL}/getpost/${postid}`);
+      const res = await apiRequest.fetchData(`${process.env.REACT_APP_PRIVATE_URL}/getpost/${postid}`);
       console.log(res);
       setPost({
         creatorName: res.data.post.creatorName,
@@ -89,7 +89,7 @@ const Comments = () => {
           <div className="postinfo flex flex-col items-center ">
             <div className="postcreator flex items-center justify-start  m-2">
               <LazyLoad
-                imgsrc={`${process.env.OUTPUT_URL}/${post.creatorImg.replace(
+                imgsrc={`${process.env.REACT_APP_OUTPUT_URL}/${post.creatorImg.replace(
                   /\\/g,
                   "/"
                 )}`}

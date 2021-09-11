@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/chatComponents/friend/friend.css"],"names":[],"mappings":"AAAA,YACI,sCAA4C,CAC5C,qBACJ","file":"22.b6aa49f0.chunk.css","sourcesContent":[".chatFriend{\r\n    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);\r\n    background-color: white;\r\n}\r\n\r\n\r\n"]}

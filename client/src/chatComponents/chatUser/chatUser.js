@@ -8,7 +8,7 @@ const ChatUser = (props) => {
   useEffect(() => {
     (
       async () => {
-        const res = await apiRequest.fetchData(`${process.env.PRIVATE_URL}/getuser/${props.id}`)
+        const res = await apiRequest.fetchData(`${process.env.REACT_APP_PRIVATE_URL}/getuser/${props.id}`)
         console.log(res);
         setStatus(res.data.user.status)
       }
@@ -21,7 +21,7 @@ const ChatUser = (props) => {
       <div className="userinfo flex flex-col items-center justify-center">
         <Link className="flex flex-col items-center justify-center" to={`/profile/${props.username}`} >
           <img
-            src={`${process.env.OUTPUT_URL}/${props.profileimage}`}
+            src={`${process.env.REACT_APP_OUTPUT_URL}/${props.profileimage}`}
             className={status==="online" ? "h-14 md:h-18 w-14 md:w-18 rounded-full md:mr-4 border-4 border-green-400":"h-14 md:h-20 w-14 md:w-20 rounded-full md:mr-4 border-4 border-blue-400"}
             alt="image"
           />

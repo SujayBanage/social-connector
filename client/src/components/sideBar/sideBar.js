@@ -71,7 +71,7 @@ const SideBar = () => {
     if(sessionStorage.getItem("authToken")){
       (
         async()=>{
-          const res = await apiRequest.fetchPrivateData(`${process.env.PRIVATE_URL}/getuserdata`,sessionStorage.getItem("authToken"));
+          const res = await apiRequest.fetchPrivateData(`${process.env.REACT_APP_PRIVATE_URL}/getuserdata`,sessionStorage.getItem("authToken"));
           console.log(res);
           setUser({username:res.data.user.username,profileimage:res.data.user.profileimage});
         }
@@ -158,7 +158,7 @@ const SideBar = () => {
         <div className="currentUser flex items-center justify-center text-white font-bold m-4">
           {/* <div className="userimg"/> */}
           {
-            user.profileimage ?<img src={`${process.env.OUTPUT_URL}/${user.profileimage}`} className="userimg h-12 w-12 lg:h-16 lg:w-16 rounded-full border-2 lg:border-4 border-white mr-2" alt="image"/> : null
+            user.profileimage ?<img src={`${process.env.REACT_APP_OUTPUT_URL}/${user.profileimage}`} className="userimg h-12 w-12 lg:h-16 lg:w-16 rounded-full border-2 lg:border-4 border-white mr-2" alt="image"/> : null
           }
           <Link to={`/profile/${user.username}`}>
           <span>{user.username}</span>

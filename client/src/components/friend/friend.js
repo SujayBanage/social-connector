@@ -19,7 +19,7 @@ const Friend = (props) => {
         <div className="md:h-20 md:w-20">
            { 
             props.img ? 
-           <img src={`${process.env.OUTPUT_URL}/${props.img}`} className="h-14 md:h-20 w-14 md:w-20 rounded-full border-4 border-white " alt="image"/> : null
+           <img src={`${process.env.REACT_APP_OUTPUT_URL}/${props.img}`} className="h-14 md:h-20 w-14 md:w-20 rounded-full border-4 border-white " alt="image"/> : null
            } 
         </div>
             <Link to={`/profile/${props.name}`} className={props.currentUser.username===props.postCreatorName || props.currentUser.username === props.user.Username ? "text-white md:text-xl font-bold m-4 " :"text-white md:text-xl font-bold m-4"}>

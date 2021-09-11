@@ -91,7 +91,7 @@ const Posts = () => {
     (
       async ()=>{
         const res = await apiRequest.fetchPrivateData(
-          `${process.env.PRIVATE_URL}/getPosts`,
+          `${process.env.REACT_APP_PRIVATE_URL}/getPosts`,
           sessionStorage.getItem("authToken")
         );
         // console.log(data);

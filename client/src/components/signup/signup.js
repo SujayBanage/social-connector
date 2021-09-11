@@ -76,7 +76,7 @@ const Signup = () => {
     };
 
     const signupRequest = new apiRequestService();
-    const response = await signupRequest.sendformData(`${process.env.AUTH_URL}/userRegister`,data);
+    const response = await signupRequest.sendformData(`${process.env.REACT_APP_AUTH_URL}/userRegister`,data);
     const responseData = response.data;
     console.log(responseData);
 

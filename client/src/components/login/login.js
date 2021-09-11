@@ -81,7 +81,7 @@ const Login = () => {
     };
 
     const loginRequest = new apiRequestService();
-    const response = await loginRequest.sendformData(`${process.env.AUTH_URL}/userLogin`,data);
+    const response = await loginRequest.sendformData(`${process.env.REACT_APP_AUTH_URL}/userLogin`,data);
     if(response.data.success===true){
       console.log("login successfulll!!!");
     }

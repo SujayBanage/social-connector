@@ -65,7 +65,7 @@ const Notifications = () => {
   useEffect(() => {
     async function fetchUser() {
       const res = await apiRequest.fetchPrivateData(
-        `${process.env.PRIVATE_URL}/getuserdata`,
+        `${process.env.REACT_APP_PRIVATE_URL}/getuserdata`,
         sessionStorage.getItem("authToken")
       );
       console.log(res.data.user);

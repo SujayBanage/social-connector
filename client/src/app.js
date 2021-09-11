@@ -1,5 +1,3 @@
-import dotenv from 'dotenv';
-dotenv.config({path:'config.env'});
 import React ,{lazy , Suspense}from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
