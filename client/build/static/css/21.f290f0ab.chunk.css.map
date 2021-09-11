@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/singlePost/singlepost.css"],"names":[],"mappings":"AAAA,YACI,sCACJ,CAEA,yBACI,YACI,SACJ,CACJ","file":"21.f290f0ab.chunk.css","sourcesContent":[".singlepost{\r\n    box-shadow:0px 0px 10px 5px rgba(0,0,0,0.3);\r\n}\r\n\r\n@media all and (max-width:500px){\r\n    .singlepost{\r\n        width: 80%;\r\n    }\r\n}"]}

@@ -81,7 +81,7 @@ const Comments = () => {
         <div className="post flex flex-col lg:flex-row lg:items-center items-center lg:p-2 justify-center lg:h-2/5 w-4/5 lg:w-1/2   mt-4 rounded-lg">
           <div className="postimg flex flex-col flex-wrap items-center lg:w-4/5 h-full m-2 ">
             <LazyLoad
-              imgsrc={`${process.env.OUTPUT_URL}/${post.postImg}`}
+              imgsrc={`${process.env.REACT_APP_OUTPUT_URL}/${post.postImg}`}
               styleClass="object-cover rounded-lg"
               alt="image"
             />

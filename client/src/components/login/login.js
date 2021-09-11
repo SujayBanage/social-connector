@@ -43,8 +43,6 @@ const notify = (success, message) => {
 };
 
 const Login = () => {
-  console.log(`${process.env.REACT_APP_AUTH_URL}/userLogin`);
-  
   const history = useHistory();
   
   const [state, setState] = useState({ email: "", password: "" });
