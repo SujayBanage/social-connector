@@ -180,9 +180,8 @@ const Chat = () => {
 
 
   return (
-    <div className="chatComponent flex flex-col md:flex-row h-full w-full md:w-full mb-4 items-center md:items-center justify-center">
+    <div className="chatComponent flex flex-col md:flex-row h-full md:h-screen w-full md:w-full mb-4 items-center md:items-center justify-center">
       <div className="chatUsers flex flex-row flex-wrap md:flex-col items-center md:items-center justify-center md:justify-start md:h-screen w-screen md:w-1/5 overflow-x-scroll overflow-y-scroll">
-        {/* <h1 className="text-center text-white font-bold">Active Users</h1> */}
         {
           state.chatusers.length!==0 ? state.chatusers.map((usr)=>{
 
@@ -195,7 +194,7 @@ const Chat = () => {
 
       </div>
 
-      <div className="chatContainer flex flex-col items-center justify-center md:h-screen w-screen md:w-7/12 mr-4 ml-4">
+      <div className="chatContainer flex flex-col items-center justify-center md:h-screen w-screen md:w-7/12 mr-4 ml-4 bg-white p-4 rounded-md">
         <div className="chatBox flex flex-col overflow-y-scroll md:overflow-y-scroll p-4 mt-4 rounded-md h-full w-screen md:w-full">
           {state.messages.length !== 0 ? (
             state.messages.map((message) => {
@@ -212,7 +211,7 @@ const Chat = () => {
         <div className="messageBox flex w-full">
           <input
             type="text"
-            className="w-full mt-2"
+            className="w-full mt-2 border-2 focus:outline-none border-gray-600 rounded-md"
             value={state.text}
             onChange={(e) =>
               dispatch({ type: ACTIONS.SET_TEXT, payload:e.target.value})
@@ -233,7 +232,7 @@ const Chat = () => {
 
 
            
-      <div className={state.chatType==="groupChat" ? "Addusers overflow-y-scroll flex md:flex-col  flex-wrap m-2 items-center justify-center md:justify-start h-36 md:h-screen w-screen md:w-1/3" : "hidden"}>
+      <div className={state.chatType==="groupChat" ? "Addusers overflow-y-scroll overflow-x-scroll flex md:flex-col  flex-wrap m-2 items-center justify-center md:justify-start h-36 md:h-screen w-screen md:w-1/3" : "hidden"}>
             {
               state.userfriends.length!==0 ? state.userfriends.map((friend)=>{
                 return <Suspense fallback={<h1>loading.....</h1>}>
