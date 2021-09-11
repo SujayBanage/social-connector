@@ -4,7 +4,7 @@ import App from "./app.js";
 import io from "socket.io-client";
 import './index.css';
 
-const END_POINT = process.env.BASE_URL;
+const END_POINT = process.env.REACT_APP_BASE_URL;
 console.log(END_POINT);
 const socket = io(END_POINT, {
   transports: ["websocket", "polling", "flashsocket"],

@@ -6,8 +6,9 @@ import validator from 'validator';
 import {toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 const notify = (success, message) => {
+
+  
   if (success === true) {
     toast.success(message, {
       position: "top-right",
@@ -42,11 +43,12 @@ const notify = (success, message) => {
 };
 
 const Login = () => {
-
+  console.log(`${process.env.REACT_APP_AUTH_URL}/userLogin`);
+  
   const history = useHistory();
-
+  
   const [state, setState] = useState({ email: "", password: "" });
-
+  
   useEffect(() => {
     if(sessionStorage.getItem("authToken")){
       history.push("/");

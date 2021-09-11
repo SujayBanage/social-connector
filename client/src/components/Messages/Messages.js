@@ -169,7 +169,7 @@ const Messages = () => {
     };
     try {
       const res = await apiRequest.getuser(
-        `${process.env.PRIVATE_URL}/getuser`,
+        `${process.env.REACT_APP_PRIVATE_URL}/getuser`,
         data,
         sessionStorage.getItem("authToken")
       );

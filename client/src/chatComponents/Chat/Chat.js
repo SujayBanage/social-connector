@@ -180,7 +180,7 @@ const Chat = () => {
 
 
   return (
-    <div className="chatComponent flex flex-col md:flex-row h-full w-full md:w-screen  items-center md:items-center justify-center">
+    <div className="chatComponent flex flex-col md:flex-row h-full w-full md:w-full mb-4 items-center md:items-center justify-center">
       <div className="chatUsers flex flex-row flex-wrap md:flex-col items-center md:items-center justify-center md:justify-start md:h-screen w-screen md:w-1/5 overflow-x-scroll overflow-y-scroll">
         {/* <h1 className="text-center text-white font-bold">Active Users</h1> */}
         {
