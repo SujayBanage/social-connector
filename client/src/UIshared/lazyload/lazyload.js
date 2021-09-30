@@ -27,7 +27,7 @@ const LazyLoad =(props)=>{
 
     if(showImage){
         return (
-            <img src={props.imgsrc} alt="image" className={props.styleClass} alt="image" srcSet={props.srcset} sizes={props.sizes}/>
+            <img src={props.imgsrc} alt="image" className={props.styleClass} alt="image" srcSet={props.srcset} sizes={props.sizes} contextMenu={false}/>
             // <img src={props.imgsrc} alt="image" className={props.styleClass} alt="image"/>
         )
     }
