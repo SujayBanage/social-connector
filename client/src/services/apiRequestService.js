@@ -1,19 +1,4 @@
 import axios from 'axios';
-let baseUrl = '';
-let axiosInstance;
-if(process.env.NODE_ENV === 'developement'){
-    baseUrl = 'http://localhost:8000'
-    const AXIOS = axios.create({
-        baseURL:baseUrl
-    });
-    axiosInstance = AXIOS;
-}
-else if(process.NODE_ENV === 'production'){
-    axiosInstance = axios;
-}
-
-
-
 class apiRequestService{
     async sendformData(url, data){
         const config = {
@@ -22,7 +7,8 @@ class apiRequestService{
             }
         }       
         try{
-            const response = await axiosInstance.post(url,data,config);
+
+            const response = await axios.post(url,data,config);
             // console.log(response);
             return response;
         }
@@ -40,7 +26,7 @@ class apiRequestService{
             }
         }
         try{
-            const response = await axiosInstance.post(url,data,config);
+            const response = await axios.post(url,data,config);
             return response;
         }
         catch(err){
@@ -51,7 +37,7 @@ class apiRequestService{
 
     async fetchData(url){
         try{
-            const response = await axiosInstance.get(url);
+            const response = await axios.get(url);
             return response;
         }
         catch(err){
@@ -67,7 +53,7 @@ class apiRequestService{
             }
         };
         try {
-            const response = await axiosInstance.get(url,config);
+            const response = await axios.get(url,config);
             return response;
         } catch (error) {
             return error;
@@ -83,7 +69,7 @@ class apiRequestService{
             }
         }
         try {
-            const response = await axiosInstance.post(url,data,config);
+            const response = await axios.post(url,data,config);
             // console.log(response);
             return response;
         } catch (error) {
@@ -99,7 +85,7 @@ class apiRequestService{
                     "content-type": "application/json"
                 }
             }
-            const response = await axiosInstance.post(url,data,config)
+            const response = await axios.post(url,data,config)
             return response;
         }
         catch(error){
@@ -114,7 +100,7 @@ class apiRequestService{
                     "content-type": "application/json"
                 }
             }
-            const response = await axiosInstance.post(url,data,config)
+            const response = await axios.post(url,data,config)
             return response;
         }
         catch(error){
